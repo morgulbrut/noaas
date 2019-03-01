@@ -24,6 +24,8 @@ func randomNo() string {
 	return nopes[rand.Intn(len(nopes))]
 }
 
+type SimpleResp struct{ Text string }
+
 func main() {
 	rand.Seed(time.Now().Unix()) // initialize global pseudo random generator
 
@@ -44,8 +46,10 @@ func main() {
 		})
 	})
 
-	router.GET("/txt", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "how 'bout no?", nil)
+	router.GET("/text", func(c *gin.Context) {
+		var r SimpleResp
+		r.Text = randomNo()
+		c.JSON(400, r)
 	})
 
 	router.Run(":" + port)
