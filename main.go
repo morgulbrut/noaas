@@ -46,9 +46,13 @@ func main() {
 		})
 	})
 
-	router.GET("/text", func(c *gin.Context) {
+	router.GET("/json", func(c *gin.Context) {
 		var r SimpleResp
 		r.Text = randomNo()
+		c.JSON(400, r)
+	})
+
+	router.GET("/text", func(c *gin.Context) {
 		c.String(400, "%s", randomNo())
 	})
 
