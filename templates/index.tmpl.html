@@ -8,7 +8,6 @@
     </head>
 <body>
 
-
   <main role="main" class="container">
     <div class="jumbotron">
       <h1>{{ .noPhrase}}</h1>
@@ -20,6 +19,13 @@
       <h1>Nope as a service </h1>
       <p class="lead">
         Because sometimes you just need some nope.
+      </p>
+      <p>
+        Using you can get the nope as plaintext or json:<br>
+        <pre>curl nope-aas.herokuapp.com/text</pre><br> 
+        or
+        <pre>curl nope-aas.herokuapp.com/json</pre>
+
       </p>
     </div>
 
