@@ -49,7 +49,7 @@ func main() {
 	router.GET("/text", func(c *gin.Context) {
 		var r SimpleResp
 		r.Text = randomNo()
-		c.JSON(400, r)
+		c.String(400, "%s", randomNo())
 	})
 
 	router.Run(":" + port)
