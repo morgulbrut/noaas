@@ -20,7 +20,9 @@ func randomNo() string {
 		"Nada",
 		"Njet!",
 		"Yesn't",
-		"Nein, Nein, Nein!")
+		"Nein, Nein, Nein!",
+		"Narp",
+		"Nah")
 	return nopes[rand.Intn(len(nopes))]
 }
 
